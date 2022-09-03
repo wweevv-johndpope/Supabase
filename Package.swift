@@ -10,26 +10,29 @@ let package = Package(
     .macOS(.v10_15),
   ],
   products: [
-    .library(
-      name: "Supabase",
-      targets: ["Supabase"]
-    )
+    .library(name: "Supabase",  targets: ["Supabase"] ),
+    // .library(name: "SupabaseStorage", targets: ["SupabaseStorage"]),
+    // .library(name: "GoTrue", targets: ["GoTrue"]),
+    // .library(name: "Realtime", targets: ["Realtime"]),
+    // .library(name: "PostgREST", targets: ["PostgREST"])
   ],
   dependencies: [
-    .package(path: "Sources/gotrue-swift"),
-    .package(path: "Sources/storage-swift"),
-    .package(path: "Sources/realtime-swift"),
-    .package(path: "Sources/postgrest-swift"),
+    .package(path: "Sources/GoTrue"),
+    .package(path: "Sources/SupabaseStorage"),
+    .package(path: "Sources/Realtime"),
+    .package(path: "Sources/PostgREST"),
+    
   ],
   targets: [
-    .target(
-      name: "Supabase",
-      dependencies: [
-        .package(path: "Sources/gotrue-swift"),
-        .package(path: "Sources/storage-swift"),
-        .package(path: "Sources/realtime-swift"),
-        .package(path: "Sources/postgrest-swift"),
-      ]
-    )
-  ]
+        .target(
+            name: "Supabase",
+            dependencies: [
+                "GoTrue",
+                "SupabaseStorage",
+                "Realtime",
+                "PostgREST"
+                
+            ]),
+
+    ]
 )

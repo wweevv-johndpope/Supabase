@@ -7,10 +7,7 @@ let package = Package(
   name: "Supabase",
   platforms: [
     .iOS(.v13),
-    .macCatalyst(.v13),
     .macOS(.v10_15),
-    .watchOS(.v6),
-    .tvOS(.v13),
   ],
   products: [
     .library(
@@ -19,10 +16,10 @@ let package = Package(
     )
   ],
   dependencies: [
-    .package(url: "https://github.com/supabase-community/gotrue-swift", from: "0.0.7"),
-    .package(url: "https://github.com/supabase-community/storage-swift.git", from: "0.0.2"),
-    .package(url: "https://github.com/supabase-community/realtime-swift.git", from: "0.0.1"),
-    .package(url: "https://github.com/supabase-community/postgrest-swift", from: "0.0.6"),
+    .package(path: "Sources/gotrue-swift"),
+    .package(path: "Sources/storage-swift"),
+    .package(path: "Sources/realtime-swift"),
+    .package(path: "Sources/postgrest-swift"),
   ],
   targets: [
     .target(

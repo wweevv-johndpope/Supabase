@@ -17,10 +17,10 @@ let package = Package(
     // .library(name: "PostgREST", targets: ["PostgREST"])
   ],
   dependencies: [
-    .package(path: "Sources/GoTrue"),
-    .package(path: "Sources/SupabaseStorage"),
-    .package(path: "Sources/Realtime"),
-    .package(path: "Sources/PostgREST"),
+    .package(path: "./Sources/GoTrue"),
+    .package(path: "./Sources/SupabaseStorage"),
+    .package(path: "./Sources/Realtime"),
+    .package(path: "./Sources/PostgREST"),
     
   ],
   targets: [

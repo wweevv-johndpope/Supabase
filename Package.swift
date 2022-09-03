@@ -25,10 +25,10 @@ let package = Package(
     .target(
       name: "Supabase",
       dependencies: [
-        .product(name: "GoTrue", package: "gotrue-swift"),
-        .product(name: "SupabaseStorage", package: "storage-swift"),
-        .product(name: "Realtime", package: "realtime-swift"),
-        .product(name: "PostgREST", package: "postgrest-swift"),
+        .package(path: "Sources/gotrue-swift"),
+        .package(path: "Sources/storage-swift"),
+        .package(path: "Sources/realtime-swift"),
+        .package(path: "Sources/postgrest-swift"),
       ]
     )
   ]
